@@ -1,0 +1,9 @@
+<li *ngIf="post" class="list-group-item w-100">
+  <div style="font-size: x-large" class="d-flex justify-content-between">
+    <div class="font-weight-bold">{{ post.title }}</div>
+    <div style="font-size: small">{{ post.creationDate }}</div>
+  </div>
+  <p>{{ post.content }}</p>
+  <div>{{ post.likeIt ? 'Liked': post.likeIt === false ? 'Not liked' : 'Not reacted yet' }}</div>
+  <button class="btn btn-info mt-2" (click)="goBack()">Return</button>
+</li>

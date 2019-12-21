@@ -1,7 +1,8 @@
 export class Post {
-    title: string;
-    content: string;
-    userId: string;
-    likeIt: boolean;
-    creationDate: Date;
+  likeIt: boolean;
+  creationDate: string;
+
+  constructor(public title: string, public content: string) {
+    this.creationDate = new Date().toLocaleDateString();
+  }
 }

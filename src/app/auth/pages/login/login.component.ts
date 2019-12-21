@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.initForm();
-        console.log(this.email);
     }
 
     initForm() {
@@ -41,7 +40,6 @@ export class LoginComponent implements OnInit {
     onSignInWithGoogle() {
         this.authService.signInWithGoogle()
             .then((user) => {
-                alert('connected !');
                 console.log(user);
             })
             .catch((error) => {
